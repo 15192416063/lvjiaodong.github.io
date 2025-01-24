@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh - CN">
+
+<head>
+    <meta charset="UTF - 8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人博客首页</title>
+    <style>
+        /* 全局样式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .featured-post {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .featured-post img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .recent-posts {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px;
+        }
+
+        .post {
+            width: 300px;
+            margin: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .post img {
+            width: 100%;
+            height: auto;
+        }
+
+        .post h3 {
+            margin: 10px;
+        }
+
+        .post p {
+            margin: 10px;
+        }
+
+        .read-more {
+            display: inline-block;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        .read-more:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>我的个人博客</h1>
+        <nav>
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">文章</a></li>
+                <li><a href="#">关于</a></li>
+                <li><a href="#">联系</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="featured-post">
+            <h2>特色文章</h2>
+            <img src="featured-post.jpg" alt="特色文章图片">
+            <h3><a href="#">这是一篇特色文章的标题</a></h3>
+            <p>这是特色文章的简短摘要，Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.
+            </p>
+            <a href="#" class="read-more">阅读更多</a>
+        </section>
+        <section class="recent-posts">
+            <h2>最新文章</h2>
+            <div class="post">
+                <img src="post1.jpg" alt="文章1图片">
+                <h3><a href="#">文章1标题</a></h3>
+                <p>文章1的简短摘要，Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <a href="#" class="read-more">阅读更多</a>
+            </div>
+            <div class="post">
+                <img src="post2.jpg" alt="文章2图片">
+                <h3><a href="#">文章2标题</a></h3>
+                <p>文章2的简短摘要，Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.
+                </p>
+                <a href="#" class="read-more">阅读更多</a>
+            </div>
+            <div class="post">
+                <img src="post3.jpg" alt="文章3图片">
+                <h3><a href="#">文章3标题</a></h3>
+                <p>文章3的简短摘要，Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat nulla pariatur.
+                </p>
+                <a href="#" class="read-more">阅读更多</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 我的个人博客. 版权所有.</p>
+    </footer>
+    <script>
+        // 这里可以添加一些交互逻辑，例如导航栏的响应式处理等
+        // 示例：当窗口宽度小于600px时，将导航栏改为垂直排列
+        window.addEventListener('resize', function () {
+            if (window.innerWidth < 600) {
+                const navItems = document.querySelectorAll('nav ul li');
+                navItems.forEach(function (item) {
+                    item.style.display = 'block';
+                    item.style.margin = '10px 0';
+                });
+            } else {
+                const navItems = document.querySelectorAll('nav ul li');
+                navItems.forEach(function (item) {
+                    item.style.display = 'inline';
+                    item.style.margin = '0 15px';
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
